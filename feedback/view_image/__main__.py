@@ -53,8 +53,8 @@ SCREEN_RECT = SCREEN.get_rect()
 X_SCROLLING_SPEED = 20
 Y_SCROLLING_SPEED = 20
 
-### timing support
-CLOCK = Clock()
+### obtain fps maintaining operation
+maintain_fps = Clock().tick
 
 
 class ImageViewer:
@@ -372,7 +372,7 @@ class ImageViewer:
 
         while self.running:
 
-            CLOCK.tick(30)
+            maintain_fps(30)
 
             self.watch_window_size()
 
@@ -429,9 +429,8 @@ class ImageViewer:
                  self.image_surf, self.image_rect
                )
 
-view_image = ImageViewer().view_image
 
-main_callable = view_image
+main_callable = ImageViewer().view_image
 
 
 ### utility function
