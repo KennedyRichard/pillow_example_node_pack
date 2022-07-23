@@ -4,7 +4,7 @@
 from itertools import cycle
 
 
-### thrid-party imports
+### third-party imports
 
 ## pygame
 
