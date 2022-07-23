@@ -212,7 +212,7 @@ class ImageViewer:
     def move_image(self, dx, dy):
         """Move image in x and/or y axis.
 
-        If performs extra checks/movement relative to
+        It performs extra checks/movement relative to
         a scroll area to ensure the image never leaves
         the screen completely.
         """
