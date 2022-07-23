@@ -60,6 +60,17 @@ maintain_fps = Clock().tick
 FPS = 30
 
 
+### now here comes the first big change on our script:
+###
+### rather than using a single function as our main
+### callable, we'll create a whole class to hold
+### several methods, one of which we'll be using
+### as the main callable for our node;
+###
+### why do we do that? Simply because we'll be dealing
+### with a lot state (different objects, values and
+### behaviours) and classes are a great tool for such job
+
 class ImageViewer:
     """Manages the loop of the view_image() node."""
 
@@ -519,7 +530,7 @@ class ImageViewer:
     ### we need to do this here rather than after
     ### instantiating ImageViewer because after
     ### instantiating the class the view_image method
-    ### can't have new attributes set on it
+    ### doesn't allow new attributes to be set on it
     view_image.dismiss_exec_time_tracking = True
 
 
