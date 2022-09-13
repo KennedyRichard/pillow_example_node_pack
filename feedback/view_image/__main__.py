@@ -534,9 +534,14 @@ class ImageViewer:
     view_image.dismiss_exec_time_tracking = True
 
 
-### finally, we just need to instantiate the ImageViewer
-### and use the view_image method as the main callable
+### now, instantiate the ImageViewer and use the view_image
+### method as the main callable
 main_callable = ImageViewer().view_image
+
+### to make it so the callable can be found in this module when
+### the node layout is exported as a python script, make sure
+### it can be found using its own name
+view_image = main_callable
 
 
 ### the support function below is used to draw a checker

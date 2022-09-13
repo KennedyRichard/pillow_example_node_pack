@@ -57,7 +57,7 @@ maintain_fps = Clock().tick
 
 
 class ImageViewer:
-    """Manages the loop of the view_image() node."""
+    """Manages the loop of the split_view() node."""
 
     def __init__(self):
 
@@ -479,7 +479,14 @@ class ImageViewer:
                )
 
 
+### assign the callable to be used as a node
+### to the 'main_callable' variable
 main_callable = ImageViewer().split_view
+
+### to make it so the callable can be found in this module when
+### the node layout is exported as a python script, make sure
+### it can also be found using its own name
+split_view = main_callable
 
 
 ### utility functions
