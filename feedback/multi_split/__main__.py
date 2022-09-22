@@ -493,14 +493,15 @@ class ImageViewer:
             update()
 
 
-### assign the callable to be used as a node
-### to the 'main_callable' variable
-main_callable = ImageViewer().multi_split_view
-
-### to make it so the callable can be found in this module when
-### the node layout is exported as a python script, make sure
-### it can be found using its own name
-multi_split_view = main_callable
+### finally, we just need to instantiate the ImageViewer
+### and use the multi_split_view method as the main callable;
+###
+### note that we also make it so the callable can be found in
+### this module using its own name, that is, 'multi_split_view';
+###
+### we do so because when the node layout is exported as a python
+### script, its name is used to find the callable
+main_callable = multi_split_view = ImageViewer().multi_split_view
 
 
 ### utility functions

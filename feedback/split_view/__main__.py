@@ -479,14 +479,15 @@ class ImageViewer:
                )
 
 
-### assign the callable to be used as a node
-### to the 'main_callable' variable
-main_callable = ImageViewer().split_view
-
-### to make it so the callable can be found in this module when
-### the node layout is exported as a python script, make sure
-### it can also be found using its own name
-split_view = main_callable
+### finally, we just need to instantiate the ImageViewer
+### and use the split_view method as the main callable;
+###
+### note that we also make it so the callable can be found in
+### this module using its own name, that is, 'split_view';
+###
+### we do so because when the node layout is exported as a python
+### script, its name is used to find the callable
+main_callable = split_view = ImageViewer().split_view
 
 
 ### utility functions
