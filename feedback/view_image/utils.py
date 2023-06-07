@@ -1,5 +1,14 @@
+### standard library import
+from itertools import cycle
+
+
+### third-party imports
+
 from pygame.draw    import rect as draw_rect
 from pygame import Rect
+
+
+
 ### the support function below is used to draw a checker
 ### pattern on the background whenever needed
 
