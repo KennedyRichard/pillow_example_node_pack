@@ -1,2 +1,5 @@
-### ignore category metadata files
+### pycache
+__pycache__/
+
+### metadata files
 .metadata.pyl
