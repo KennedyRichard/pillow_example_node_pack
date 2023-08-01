@@ -4,8 +4,9 @@ from itertools import cycle
 
 ### third-party imports
 
-from pygame.draw    import rect as draw_rect
 from pygame import Rect
+
+from pygame.draw import rect as draw_rect
 
 
 
