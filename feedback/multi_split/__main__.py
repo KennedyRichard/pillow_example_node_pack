@@ -6,7 +6,7 @@ from itertools import cycle
 
 ### third-party imports
 
-## pygame
+## pygame-ce
 
 from pygame import (
 
