@@ -8,7 +8,7 @@ from pygame import Surface
 
 from pygame.math import Vector2
 
-from pygame.image import fromstring as image_from_string
+from pygame.image import frombytes as image_from_bytes
 
 from pygame.transform import smoothscale as smoothscale_surface
 
@@ -187,4 +187,4 @@ def surf_from_pillow_image(image):
     size = image.size
     data = image.tobytes()
 
-    return image_from_string(data, size, mode)
+    return image_from_bytes(data, size, mode)

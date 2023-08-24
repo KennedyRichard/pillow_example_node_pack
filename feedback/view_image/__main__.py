@@ -32,7 +32,7 @@ from pygame import (
 from pygame.display import get_surface, update
 from pygame.time    import Clock
 from pygame.event   import get as get_events
-from pygame.image   import fromstring as image_from_string
+from pygame.image   import frombytes as image_from_bytes
 
 from pygame.key import get_pressed as get_pressed_keys
 
@@ -476,7 +476,7 @@ class ImageViewer:
         size = image.size
         data = image.tobytes()
 
-        surf = image_from_string(data, size, mode)
+        surf = image_from_bytes(data, size, mode)
 
         ### draw the background on the screen
         SCREEN.blit(self.background, (0, 0))

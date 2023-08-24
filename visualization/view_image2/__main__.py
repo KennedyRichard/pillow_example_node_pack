@@ -7,7 +7,7 @@ from pygame import Surface
 
 from pygame.math import Vector2
 
-from pygame.image import fromstring as image_from_string
+from pygame.image import frombytes as image_from_bytes
 
 from pygame.transform import smoothscale as smoothscale_surface
 
@@ -56,7 +56,7 @@ def view_image2(
     size = image.size
     data = image.tobytes()
 
-    full_surface = image_from_string(data, size, mode)
+    full_surface = image_from_bytes(data, size, mode)
 
     ### if the max preview size is 0, it means the preview doesn't need
     ### to be below a specific size, so we can use the full surface

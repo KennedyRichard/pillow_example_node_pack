@@ -32,7 +32,7 @@ from pygame import (
 from pygame.display import get_surface, update
 from pygame.time    import Clock
 from pygame.event   import get as get_events
-from pygame.image   import fromstring as image_from_string
+from pygame.image   import frombytes as image_from_bytes
 from pygame.draw    import rect as draw_rect
 
 from pygame.key import get_pressed as get_pressed_keys
@@ -567,5 +567,5 @@ def surf_from_pillow_image(image):
     size = image.size
     data = image.tobytes()
 
-    return image_from_string(data, size, mode)
+    return image_from_bytes(data, size, mode)
 
